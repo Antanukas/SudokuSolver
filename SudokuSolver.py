@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#       SudokuTest.py
+#       SudokuSolver.py
 #       
-#       Copyright 2011 zee <zee@zee-Extensa-5635Z>
+#       Copyright 2011 zee <zygis.gg@gmail.com>
 #       
 #       2011-07-30
 
-# This constant is used when flag is -e or -c.
+# This constant is used when option flag is -e or -c.
 SUDOKU = """	
 015 000 090
 092 453 007
@@ -121,6 +121,19 @@ def main():
 				display_help();
 			else:
 				exit("Incorect flag. Use SudokuSolver.py -help")
+		else:
+				exit("Incorect flag. Use SudokuSolver.py -help")
+	else:
+		if not sudoku.init_from_file():
+			exit("File sudoku.txt not exist.");
+		try:
+			f = open("answer.txt", "w")
+		except(IOError):
+			exit("File error.")
+		st = time.time()
+		answer = Sudoku.format_sudoku_answer( sudoku.solve() )
+		f.write(answer)
+		print "Time elapsed: {0} s. ".format(time.time() - st)	
 	return 0
 
 if __name__ == '__main__':

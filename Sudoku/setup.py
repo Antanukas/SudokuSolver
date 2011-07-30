@@ -11,10 +11,10 @@ from distutils.core import setup
 
 setup( 
         name         = 'Sudoku', 
-        version      = '1.0.1', 
+        version      = '1.0.2', 
         py_modules   = ['Sudoku'],
         author       = 'zee',
         author_email = 'zygis.gg@gmail.com',
         url          = 'none',
-        description  = 'Sudoku class.',
+        description  = 'Sudoku module.',
      )

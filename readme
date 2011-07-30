@@ -1,1 +1,44 @@
-Test file to make sure git works properly
+SudokuSolver - python program for fast sudoku solving.
+
+NOTE:
+	Current version of SudokuSolver works only on linux.
+	In advanvce I'll upgrade it to work platform independently.
+
+INSTRUCTIONS:
+	* Preparation:
+		To use this program at first you have to install sudoku module.
+		Do it in terminal:
+			cd path_to_dir_/SudokuSolver/Sudoku
+			python setup.py sdist (if you use python 3 or greater: python3 setup.py sdist)
+			python setup.py install (if you use python 3 or greater: python3 setup.py install)
+		After Sudoku module installation you can run program
+	
+	* Program running:
+		From command line:
+			cd path_to_dir_/SudokuSolver
+			python SudokuSolver.py
+		After that program takes data from sudoku.txt and puts answer in answer.txt (if sudoku.txt doesn't exist you'll get an error)
+		You can use flags to change source and destination of the data (look at "Sudoku data").
+		Type in command line
+			python SudokuSolver.py -help 
+		to know more about it.
+		
+	* Sudoku data
+		1) You can put sudoku matrix to file, by default it is sudoku.txt, 
+			but you can change it. 
+			First line in the input file must be empty or with comments (no sudoku data)
+			Then you can enter sudoku data. 
+			IMPORTANT: Empty squares fill with zeros.
+			To use this method enter flag -f or -d
+			---
+				python SudokuSolver.py -c [filename1] [filename2] (to take data from filename1 file and put answer in filename2 file, if no filenames entered then program uses default values in file - sudoku.txt, out file - answer.txt)
+				python SudokuSolver.py -d [filename] (to take data from file filename and display answer in console. If no filename entered the program uses default value sudoku.txt)
+				
+		2) You can enter sudoku matrix in SudokuSolver.py file, in the begining of the file is
+			const named SUDOKU. Enter sudoku with the same rules as in file. 
+			To use this method enter flag -c or -e
+			---
+				python SudokuSolver.py -c [filename] (to put answer in file, if no filename entered will put in sudoku.txt file)
+				python SudokuSolver.py -e  (to display answer in console)
+			
+	
