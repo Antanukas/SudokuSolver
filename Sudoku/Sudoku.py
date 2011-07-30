@@ -6,9 +6,6 @@ Module stores Sudoku class.
 """
 SUDOKU_SIZE = 9
 
-from curses.ascii import isdigit
-
-    
 class Sudoku(object):
 	
 	def init_from_file(self, filename = "sudoku.txt"):
@@ -128,7 +125,7 @@ class Sudoku(object):
 		tmp = []
 		j = 0
 		for i in range(len(string)):
-			if isdigit(string[i]):          
+			if string[i].isdigit():          
 				tmp.append(int(string[i]));
 				j += 1; 
 				if j == SUDOKU_SIZE:            # add line to main matrix
