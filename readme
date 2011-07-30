@@ -40,8 +40,3 @@ INSTRUCTIONS:
 			For example:
 				python SudokuSolver.py -c [filename] (to put answer in file, if no filename entered will put in sudoku.txt file)
 				python SudokuSolver.py -e  (to display answer in console)
-<<<<<<< HEAD
-=======
-
-testing
->>>>>>> ver-1.0
