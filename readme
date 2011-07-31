@@ -1,8 +1,7 @@
 SudokuSolver - python program for fast sudoku solving.
 
 NOTE:
-	Current version of SudokuSolver works only on linux.
-	In near future I'll upgrade it to work platform independent.
+	This versions works on windows. 
 
 INSTRUCTIONS:
 	* Preparation:
